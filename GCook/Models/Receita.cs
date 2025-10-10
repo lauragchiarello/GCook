@@ -9,24 +9,23 @@ namespace GCook.Models;
         [Key]
         public int Id { get; set; }
    
-        [StringLength(100)]
-        [Required(ErrorMessage = "O nome é obrigatório")]
-        public string Nome { get; set; }
-
         [Display(Name ="Categoria")]
         [Required(ErrorMessage = "A categoria é obrigatória")]
         public int CategoriaId { get; set; }
         [ForeignKey("CategoriaId")]
         [Display(Name ="Categoria")]
         public Categoria Categoria { get; set; }
-
+        
+        [StringLength(100)]
+        [Required(ErrorMessage = "O nome é obrigatório")]
+        public string Nome { get; set; }
 
         [StringLength(1000)]
-        [Required(ErrorMessage = "A descrição é obrigatória")]
+        [Display(Name = "Descrição ")]
         public string Descricao { get; set; }
 
         [StringLength(30)]
-        [Required(ErrorMessage = "O tempo de preparo é obrigatório")]
+        [Display(Name = "Tempo de Preparo")]
         public string TempoPreparo { get; set; }
 
         public int Rendimento { get; set; }
