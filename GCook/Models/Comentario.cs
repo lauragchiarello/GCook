@@ -20,7 +20,7 @@ namespace GCook.Models;
         
         [Display(Name ="Usuario")]
         [Required(ErrorMessage ="O usuário é obrigatória")]
-        public int UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
         [ForeignKey("UsuarioId")]
         [Display(Name = "Usuario")]
         public Usuario Usuario { get; set; }
