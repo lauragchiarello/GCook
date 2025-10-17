@@ -5,7 +5,7 @@ namespace GCook.ViewModels;
 
     public class HomeVM
     {
-        public Lista<Categoria> Categoria { get; set; }
+        public List<Categoria> Categorias { get; set; }
 
         public List<Receita> Receitas { get; set; }
     }

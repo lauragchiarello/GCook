@@ -1,12 +1,16 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using GCook.Models;
+using GCook.ViewModels;
+using GCook.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace GCook.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
 
     public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {

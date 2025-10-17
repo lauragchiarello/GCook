@@ -17,7 +17,7 @@ namespace GCook.Models;
         [Key, Column(Order = 2 )]
         [Display(Name ="Ingrediente")]
         public int IngredienteId { get; set; }
-        [ForeignKey("IgredienteId")]
+        [ForeignKey("IngredienteId")]
         [Display(Name = "Ingrediente")]
         public Ingrediente Ingrediente {get; set;}
         
